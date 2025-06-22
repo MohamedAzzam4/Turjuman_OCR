@@ -83,7 +83,7 @@ async def ocr_and_translate(file: UploadFile = File(...)):
 
 
 # --- الجزء المضاف لتشغيل السيرفر ---
-if _name_ == "_main_":
+if __name__ == "__main__":
     # حاول تقرأ البورت من متغير البيئة PORT، لو مش موجود استخدم 8080
     port = int(os.environ.get("PORT", 8080))
     # شغل السيرفر باستخدام uvicorn
