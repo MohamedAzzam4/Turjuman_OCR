@@ -59,7 +59,7 @@ async def ocr_and_translate(file: UploadFile = File(...)):
         # Step 3: Translation (only if english_text is not empty)
         if english_text:
             translation_response = model.generate_content(
-                [f"Translate this English text to Germany dont say anything else just the translation:\n\n{english_text}"],
+                [f"Translate this English text to Arabic don't say anything els,e just the translation:\n\n{english_text}"],
                 generation_config={"temperature": 0.3}
             )
             # Check if translation response has text
